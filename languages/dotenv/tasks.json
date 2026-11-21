@@ -1,0 +1,32 @@
+[
+  {
+    "label": "dotenv: Audit current environment",
+    "command": "zed-dotenv-lsp",
+    "args": ["task", "check", "$ZED_WORKTREE_ROOT/.env"]
+  },
+  {
+    "label": "dotenv: Mask current environment",
+    "command": "zed-dotenv-lsp",
+    "args": ["task", "mask", "$ZED_WORKTREE_ROOT/.env"]
+  },
+  {
+    "label": "dotenv: Generate sanitized template",
+    "command": "zed-dotenv-lsp",
+    "args": ["task", "template", "$ZED_WORKTREE_ROOT/.env"]
+  },
+  {
+    "label": "dotenv: Compare environment files",
+    "command": "zed-dotenv-lsp",
+    "args": ["task", "matrix"]
+  },
+  {
+    "label": "dotenv: Scan current source file",
+    "command": "zed-dotenv-lsp",
+    "args": ["task", "scan", "$ZED_FILE"]
+  },
+  {
+    "label": "dotenv: Check HTTP dotenv references",
+    "command": "zed-dotenv-lsp",
+    "args": ["task", "http", "$ZED_FILE"]
+  }
+]

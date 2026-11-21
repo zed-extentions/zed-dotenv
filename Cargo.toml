@@ -1,0 +1,22 @@
+[workspace]
+members = [".", "crates/dotenv-lsp"]
+resolver = "2"
+
+[package]
+name = "zed_dotenv"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.7.0"
+
+[profile.release]
+opt-level = "s"
+lto = true
+
+[lints.rust]
+unsafe_code = "forbid"

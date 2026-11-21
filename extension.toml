@@ -1,0 +1,16 @@
+id = "dotenv-lsp"
+name = "dotenv & Secret Linter"
+version = "0.1.0"
+schema_version = 1
+authors = ["wruwami"]
+description = "Environment variable (`.env`) autocompletion, hover masking, and `.env.example` drift linter for Zed via `dotenv-lsp`."
+repository = "https://github.com/zed-extentions/zed-dotenv"
+
+[grammars.dotenv]
+repository = "https://github.com/pnx/tree-sitter-dotenv"
+commit = "b4f0b0d154a348d4ae57dfc4d37f128559fbde6d"
+
+[language_servers.dotenv-lsp]
+name = "dotenv Language Server"
+languages = ["Env", "dotenv", "env"]
+code_action_kinds = ["quickfix", "source.fixAll"]
